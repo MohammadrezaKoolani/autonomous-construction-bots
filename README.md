@@ -129,8 +129,6 @@ cd construction-site-monitoring
 # Flowchart
 <img src="https://github.com/MohammadrezaKoolani/autonomous-construction-bots/blob/main/AI2.png" width="300" height="600" />
 
-# License
-This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
 
 # Acknowledgments
 Special thanks to the AI4Ro2 course and Professor Fulvio Mastrogiovanni for guidance and materials.
