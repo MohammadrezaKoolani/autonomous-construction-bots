@@ -32,6 +32,13 @@ The project focuses on defining PDDL-based planning tasks where the initial cond
 
 The planning tasks are implemented using domain-independent planning techniques, ensuring flexibility and adaptability across different construction site layouts. The system's goal is to enhance construction site monitoring by automating routine inspection tasks, reducing human intervention, and improving data accuracy and efficiency.
 
+## Features
+- Autonomous navigation based on a topological map
+- Inspection via cameras, LiDAR, and thermal sensors
+- Onboard and off-site data processing
+- Decision-making for repeated inspections
+- Seamless reporting to BIM systems
+  
 # Understanding the Domain and Problem Files
 
 In PDDL (Planning Domain Definition Language), planning tasks are divided into two main components: **Domain** and **Problem**. These files define the rules and objectives for the autonomous robotic system.
