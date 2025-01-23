@@ -22,7 +22,15 @@
 
 # Overview
 ## Introduction
-This project models an autonomous robotic system for monitoring construction sites using **Planning Domain Definition Language (PDDL)**. Robots navigate the site, conduct inspections, collect data, and report findings to ensure efficient progress tracking.
+This project models an autonomous robotic system for monitoring construction sites using Planning Domain Definition Language (PDDL). Robots navigate the site, conduct inspections, collect data, and report findings to ensure efficient progress tracking.
+
+The system defines a domain where an autonomous robot can operate within a construction site environment consisting of multiple locations, configurations, and sensors. The robot can move between locations, extend and position its manipulator for inspections, activate sensors such as cameras, LiDAR, and thermal imaging, collect and process data, and finally report its findings to a central monitoring system.
+
+The project focuses on defining PDDL-based planning tasks where the initial conditions include the robot's starting position, available connections between locations, and the initial state of sensors and manipulators. The goal is to achieve complete site inspection by navigating through all necessary areas and collecting required data while optimizing resource utilization.
+
+The planning tasks are implemented using domain-independent planning techniques, ensuring flexibility and adaptability across different construction site layouts. The system's goal is to enhance construction site monitoring by automating routine inspection tasks, reducing human intervention, and improving data accuracy and efficiency.
+
+
 
 ## Features
 - Autonomous navigation based on a topological map
