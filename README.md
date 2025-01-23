@@ -99,17 +99,8 @@ cd construction-site-monitoring
 | Reporting  | ✅ |
 
 # Flowchart
+![Flowchart](path-to-your-uploaded-image)
 
-```flow
-st=>start: Start
-op=>operation: Inspect site
-cond=>condition: Inspection complete?
-e=>end: Report results
-
-st->op->cond
-cond(yes)->e
-cond(no)->op
-```
 
 # License
 
