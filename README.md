@@ -8,12 +8,6 @@
 - Compatible with PDDL planners like Fast Downward and Metric-FF
 - Modular and extensible for future improvements
 
-# Construction Site Monitoring with PDDL
-
-![](https://pandao.github.io/editor.md/images/logos/editormd-logo-180x180.png)
-
-![](https://img.shields.io/github/stars/yourrepo/construction-site-monitoring.svg) ![](https://img.shields.io/github/forks/yourrepo/construction-site-monitoring.svg) ![](https://img.shields.io/github/tag/yourrepo/construction-site-monitoring.svg) ![](https://img.shields.io/github/release/yourrepo/construction-site-monitoring.svg) ![](https://img.shields.io/github/issues/yourrepo/construction-site-monitoring.svg)
-
 **Table of Contents**
 
 [TOCM]
