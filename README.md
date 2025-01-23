@@ -99,7 +99,7 @@ cd construction-site-monitoring
 | Reporting  | ✅ |
 
 # Flowchart
-![Flowchart](path-to-your-uploaded-image)
+![Flowchart](https://github.com/MohammadrezaKoolani/autonomous-construction-bots/blob/main/AI2.png)
 
 
 # License
