@@ -1,4 +1,5 @@
 # autonomous-construction-bots
+
 ### Features
 
 - Autonomous robots for construction site monitoring
@@ -19,13 +20,13 @@
 - [Problem Definition](#problem-definition)
   - [Initial State](#initial-state)
   - [Goal State](#goal-state)
-- [Installation](#code-blocks)
+- [How to Run](#how-to-run)
+- [Installation](#installation)
 - [Lists](#lists)
 - [Tables](#tables)
 - [Flowchart](#flowchart)
 - [License](#license)
 - [Acknowledgments](#acknowledgments)
-
 
 # Overview
 ## Introduction
@@ -76,20 +77,28 @@ This project models an autonomous robotic system for monitoring construction sit
 (and (inspected b config lidar))
 ```
 
-### Code Blocks
+# How to Run
+To run the planner with the provided PDDL files using the Planning.Domains editor:
+
+1. Go to the [Planning Domains editor](https://editor.planning.domains/#).
+2. Create a new project and upload the `domain.pddl` (domain file) and `problem.pddl` (problem file).
+3. Select the **BFWS** planner from the available planners.
+4. Run the planner to solve the problem.
+
+# Installation
 ```bash
 git clone https://github.com/yourusername/construction-site-monitoring.git
 cd construction-site-monitoring
 ./fast-downward.py domain.pddl problem.pddl --search "astar(blind())"
 ```
 
-### Lists
+# Lists
 
 - [x] Feature 1
 - [x] Feature 2
 - [ ] Feature 3
 
-### Tables
+# Tables
 
 | Feature  | Status |
 |----------|--------|
@@ -97,7 +106,7 @@ cd construction-site-monitoring
 | Inspection | ✅ |
 | Reporting  | ✅ |
 
-### Flowchart
+# Flowchart
 
 ```flow
 st=>start: Start
