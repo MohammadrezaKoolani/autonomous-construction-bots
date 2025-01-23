@@ -1,14 +1,5 @@
 # autonomous-construction-bots
 
-### Features
-
-- Autonomous robots for construction site monitoring
-- Implements navigation, inspection, data collection, processing, decision-making, and reporting
-- Fully functional PDDL domain and problem definitions
-- Supports real-time updates to a Building Information Monitoring (BIM) system
-- Compatible with PDDL planners like Fast Downward and Metric-FF
-- Modular and extensible for future improvements
-
 **Table of Contents**
 
 - [Introduction](#introduction)
@@ -27,6 +18,7 @@
 - [Flowchart](#flowchart)
 - [License](#license)
 - [Acknowledgments](#acknowledgments)
+
 
 # Overview
 ## Introduction
