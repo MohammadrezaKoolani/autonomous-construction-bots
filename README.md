@@ -10,16 +10,22 @@
 
 **Table of Contents**
 
-[TOCM]
+- [Introduction](#introduction)
+- [Features](#features)
+- [Domain Model](#domain-model)
+  - [Types](#types)
+  - [Predicates](#predicates)
+  - [Actions](#actions)
+- [Problem Definition](#problem-definition)
+  - [Initial State](#initial-state)
+  - [Goal State](#goal-state)
+- [Installation](#code-blocks)
+- [Lists](#lists)
+- [Tables](#tables)
+- [Flowchart](#flowchart)
+- [License](#license)
+- [Acknowledgments](#acknowledgments)
 
-[TOC]
-
-#H1 Header
-##H2 Header
-###H3 Header
-####H4 Header
-#####H5 Header
-######H6 Header
 
 # Overview
 ## Introduction
