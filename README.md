@@ -11,6 +11,9 @@
 - [Problem Definition](#problem-definition)
   - [Initial State](#initial-state)
   - [Goal State](#goal-state)
+- [Understanding the Domain and Problem Files](#understanding-the-domain-and-problem-files)
+  - [Domain File](#domain-file)
+  - [Problem File](#problem-file)
 - [How to Run](#how-to-run)
 - [Installation](#installation)
 - [Lists](#lists)
@@ -18,7 +21,6 @@
 - [Flowchart](#flowchart)
 - [License](#license)
 - [Acknowledgments](#acknowledgments)
-
 
 # Overview
 ## Introduction
@@ -29,8 +31,6 @@ The system defines a domain where an autonomous robot can operate within a const
 The project focuses on defining PDDL-based planning tasks where the initial conditions include the robot's starting position, available connections between locations, and the initial state of sensors and manipulators. The goal is to achieve complete site inspection by navigating through all necessary areas and collecting required data while optimizing resource utilization.
 
 The planning tasks are implemented using domain-independent planning techniques, ensuring flexibility and adaptability across different construction site layouts. The system's goal is to enhance construction site monitoring by automating routine inspection tasks, reducing human intervention, and improving data accuracy and efficiency.
-
-
 
 ## Features
 - Autonomous navigation based on a topological map
@@ -77,6 +77,22 @@ The planning tasks are implemented using domain-independent planning techniques,
 (and (inspected b config lidar))
 ```
 
+# Understanding the Domain and Problem Files
+
+## Domain File
+The `domain.pddl` file defines the general rules and capabilities of the robot system. It includes types, predicates, and actions that describe what the robot can do. This file consists of:
+
+- **Types:** Specifies different entities involved (robots, locations, sensors).
+- **Predicates:** Logical conditions describing relationships between entities.
+- **Actions:** Define robot operations with parameters, preconditions, and effects.
+
+## Problem File
+The `problem.pddl` file specifies the initial and goal states for a particular scenario. It includes:
+
+- **Objects:** Declares instances of the defined types.
+- **Initial State:** Describes the starting conditions.
+- **Goal State:** Specifies desired conditions to be achieved by the planner.
+
 # How to Run
 To run the planner with the provided PDDL files using the Planning.Domains editor:
 
@@ -108,8 +124,6 @@ cd construction-site-monitoring
 
 # Flowchart
 <img src="https://github.com/MohammadrezaKoolani/autonomous-construction-bots/blob/main/AI2.png" width="300" height="600" />
-
-
 
 # License
 
