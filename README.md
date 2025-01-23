@@ -107,7 +107,7 @@ cd construction-site-monitoring
 | Reporting  | ✅ |
 
 # Flowchart
-<img src="https://github.com/MohammadrezaKoolani/autonomous-construction-bots/blob/main/AI2.png" width="500" height="600" />
+<img src="https://github.com/MohammadrezaKoolani/autonomous-construction-bots/blob/main/AI2.png" width="300" height="600" />
 
 
 
