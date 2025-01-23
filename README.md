@@ -32,29 +32,33 @@ The project focuses on defining PDDL-based planning tasks where the initial cond
 
 The planning tasks are implemented using domain-independent planning techniques, ensuring flexibility and adaptability across different construction site layouts. The system's goal is to enhance construction site monitoring by automating routine inspection tasks, reducing human intervention, and improving data accuracy and efficiency.
 
-## Features
-- Autonomous navigation based on a topological map
-- Inspection via cameras, LiDAR, and thermal sensors
-- Onboard and off-site data processing
-- Decision-making for repeated inspections
-- Seamless reporting to BIM systems
+# Understanding the Domain and Problem Files
 
-### Domain Model
+In PDDL (Planning Domain Definition Language), planning tasks are divided into two main components: **Domain** and **Problem**. These files define the rules and objectives for the autonomous robotic system.
 
-#### Types
-- `robot` - Represents the autonomous agent
-- `location` - Points of interest on the site
-- `configuration` - Manipulator positions
-- `sensor` - Various sensors used for inspection
+## Domain File (`domain.pddl`)
+The domain file describes the **"what can be done"**, defining the available actions, objects, and conditions that govern the system's behavior. It contains:
 
-#### Predicates
+### Types
+Specifies the different categories of objects involved in the domain, such as robots, locations, sensors, and configurations.
+
+### Predicates
+Logical statements that describe relationships and states within the environment. They help track conditions such as:
 ```pddl
 (at ?r - robot ?l - location)
 (connected ?l1 - location ?l2 - location)
 (inspected ?l - location ?c - configuration ?s - sensor)
 ```
+These predicates define where the robot is, whether locations are connected, and whether inspections have been completed.
 
-#### Actions
+### Actions
+Defines the possible operations the robot can perform, such as moving between locations, activating sensors, or reporting data. Each action consists of:
+
+- **Parameters:** What objects the action affects.
+- **Preconditions:** What must be true before the action can execute.
+- **Effects:** How the world state changes after the action is performed.
+
+Example action to move the robot:
 ```pddl
 (:action move
     :parameters (?r - robot ?from - location ?to - location)
@@ -62,36 +66,43 @@ The planning tasks are implemented using domain-independent planning techniques,
     :effect (and (at ?r ?to) (not (at ?r ?from))))
 ```
 
-# Problem Definition
-## Initial State
+## Problem File (`problem.pddl`)
+The problem file defines **"what needs to be done"**, specifying the specific scenario within the domain that we want to solve. It contains:
+
+### Objects
+Declares the instances of different types defined in the domain, such as:
 ```pddl
-(at robot a)
-(connected a b)
-(connected b c)
-(manipulator_retracted robot)
-(sensors_off robot)
+(:objects
+    robot - robot
+    a b c d - location
+    config - configuration
+    camera lidar thermal - sensor
+)
 ```
 
-## Goal State
+### Initial State
+Describes the starting conditions of the environment, such as the robot's initial position, available connections, and sensor states. Example:
 ```pddl
-(and (inspected b config lidar))
+(:init
+    (at robot a)
+    (connected a b)
+    (connected b c)
+    (sensors_off robot)
+)
 ```
 
-# Understanding the Domain and Problem Files
+### Goal State
+Specifies the desired conditions that must be met to solve the problem. The planner will generate a sequence of actions to achieve this goal. Example:
+```pddl
+(:goal
+    (and (inspected b config lidar))
+)
+```
 
-## Domain File
-The `domain.pddl` file defines the general rules and capabilities of the robot system. It includes types, predicates, and actions that describe what the robot can do. This file consists of:
-
-- **Types:** Specifies different entities involved (robots, locations, sensors).
-- **Predicates:** Logical conditions describing relationships between entities.
-- **Actions:** Define robot operations with parameters, preconditions, and effects.
-
-## Problem File
-The `problem.pddl` file specifies the initial and goal states for a particular scenario. It includes:
-
-- **Objects:** Declares instances of the defined types.
-- **Initial State:** Describes the starting conditions.
-- **Goal State:** Specifies desired conditions to be achieved by the planner.
+### How the Domain and Problem Work Together
+- The **domain file** defines the general rules and capabilities of the robot system.
+- The **problem file** sets a specific task within the defined environment.
+- A planner, such as the **BFWS planner**, takes both files and generates an optimal sequence of actions (a plan) to transition from the initial state to the goal state.
 
 # How to Run
 To run the planner with the provided PDDL files using the Planning.Domains editor:
@@ -108,28 +119,12 @@ cd construction-site-monitoring
 ./fast-downward.py domain.pddl problem.pddl --search "astar(blind())"
 ```
 
-# Lists
-
-- [x] Feature 1
-- [x] Feature 2
-- [ ] Feature 3
-
-# Tables
-
-| Feature  | Status |
-|----------|--------|
-| Navigation | ✅ |
-| Inspection | ✅ |
-| Reporting  | ✅ |
-
 # Flowchart
 <img src="https://github.com/MohammadrezaKoolani/autonomous-construction-bots/blob/main/AI2.png" width="300" height="600" />
 
 # License
-
 This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
 
 # Acknowledgments
-
 Special thanks to the AI4Ro2 course and Professor Fulvio Mastrogiovanni for guidance and materials.
 
